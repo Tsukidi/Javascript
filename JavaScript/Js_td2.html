@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TD MMI</title>
+  </head>
+  <body>
+    <nav>Navigation</nav>
+    <section>
+      <h1>Exercice 1</h1>
+      <p>Créer un bouton executant une fonction additionnant deux nombres. Afficher ensuite le résultat.</p>
+      
+       <button onclick="myFunction()">Fonction</button>
+       <p>Total :<span id="total"></span></p>
+      
+      <script>
+      function myFunction (){
+      var nb1 = 5;
+      var nb2 = 18;
+      var total = nb1 + nb2;
+      document.getElementById('total').innerHTML =  total;
+    }
+    </script>
+      
+      <h1>Exercice 2</h1>
+      <p>Créer un bouton executant une fonction qui multiplie deux nombres. Afficher ensuite le résultat.</p>
+      
+      <button onclick="myMultiplication()">Multiplication</button>
+       <p>Total :<span id="total2"></span></p>
+      
+      <script>
+      function myMultiplication(){
+      var nb1 = 5;
+      var nb2 = 18;
+      var total = nb1 * nb2;
+      document.getElementById('total2').innerHTML =  total;
+    }
+    </script>
+      
+      <h1>Exercice 3</h1>
+      <p>Créer une fonction qui vous affiche le reste de la division euclidienne de 12 par 5.</p>
+      
+      <button onclick="myDivision()">Division</button>
+       <p>Total :<span id="total3"></span></p>
+      
+      <script>
+      function myDivision(){
+      var nb1 = 12;
+      var nb2 = 5;
+      var total = nb1 % nb2;
+      document.getElementById('total3').innerHTML =  total;
+    }
+    </script>
+      
+      <h1>Exercice 4</h1>
+      <p>4.1- Afficher une variable égale à 0, puis intégrez un bouton qui à chaque clique ajoute 2 à votre variable.<br>
+        4.2- Ajouter un autre bouton permettant de diviser ce nombre par deux<br>
+4.3- Ajouter ensuite un bouton permettant de multiplier votre variable par 4.<br>
+        4.4- Ajouter enfin un dernier bouton vous permettant de soustraire 1 à votre résultat.</p>
+
+      <button onclick="plus()"> Ajouter +2 </button>
+      <button onclick="diviser()"> Diviser par 2 </button>
+      <button onclick="fois()"> Multiplier par 4 </button>
+      <button onclick="moins()"> Soustraire 1 </button>
+      <p> Total : <span id="total"></span></p>
+
+      <script type="text/javascript">
+        var nb = 0;
+        function plus() {
+          nb += 2;
+    document.getElementById('total').innerHTML = nb;
+        }
+
+        function diviser() {
+          nb /= 2;
+    document.getElementById('total').innerHTML = nb;
+        }
+
+        function fois() {
+          nb *= 4;
+    document.getElementById('total').innerHTML = nb;
+        }
+
+        function moins() {
+          nb -= 1;
+    document.getElementById('total').innerHTML = nb;
+        }
+      </script>
+
+      
+      <h1>Exercice 5</h1>
+      <p>Créer une fonction vous permettant d'afficher un nombre aléatoire entre 1 et 100. Ici vous trouverez la fonction générant un nombre entier aléatoire -> var nombreRandom = Math.Floor(Math.random() * (nbmax - nbmin) + nbmin);</p>
+
+      <button onclick="myrandom()">Random number</button>
+      <p>Random number : <span id="random"></span></p>
+    
+    <script>
+      function myrandom() {
+        var nbmax = 100;
+        var nbmin = 0; 
+        var nombreRandom = Math.floor(Math.random() * (nbmax - nbmin) + nbmin);
+        document.getElementById('random').innerHTML = nombreRandom;
+      }
+      
+    </script>
+
+      <h1>Exercice 6</h1>
+      <p>Créer une fonction à 1 paramètre (un nombre entier), multipliez cette variable par deux et afficher le sur votre navigateur.</p>
+
+      <button onclick="number(15)">Number</button>
+      <p>Number : <span id="nombre"></span></p>
+    
+    <script>
+      function number(first) {
+        var total = first * 2;
+        document.getElementById('nombre').innerHTML = total;
+      }
+      
+    </script>
+      
+      <h1>Exercice 7</h1>
+      <p>Créer une fonction à deux paramètres, additionnez ces deux paramètres et affichez les sur votre navigateur.</p>
+
+      <button onclick="multiplication(5, 3);">Multiplier par 2</button>
+      <p> Total : <span id="total"></span></p>
+
+      <script type="text/javascript">
+          function multiplication(first,second) {
+          var total = first * second;
+          document.getElementById('total').innerHTML = total;
+          }
+      </script>
+      
+      <h1>Exercice 8</h1>
+      <p>Ajoutez un bouton permettant d'executer une fonction à trois paramètres (trois nombres entiers). Multipliez les deux premiers paramètres et effectuez le reste de la division euclidienne à partir du troisième. Afficher le résultat.</p>
+
+      <button onclick="troisnumbres(10, 15, 150);">Number</button>
+      <p>Resultat : <span id="total00"></span></p>
+
+      <script type="text/javascript">
+          function troisnumbres(first,second,third) {
+          var calcul = first * second;
+          var total = calcul % third;
+          document.getElementById('total00').innerHTML = total;
+          }
+      </script>
+      
+      <h1>Exercice 9 - Mini Jeu, plus ou moins?</h1>
+      <p>Développer un script dans lequel votre utilisateur doit deviner un nombre entre 1 et 100. Étapes:</p>
+      <ul>
+        Générer un nombre aléatoire
+      </ul>
+      <ul>
+        Inclure un champ dans lequel votre utilisateur pourra rentrer une valeur.
+      </ul>
+      <ul>
+        Ajouter un bouton permettant d'activer votre fonction de contrôle (fonction ayant pour argument la valeur insérée par l'utilisateur).
+      </ul>
+      <ul>
+       Définir une une condition (if) . Si le nombre inséré par votre utilisateur est plus grand > Afficher un message ("Nombre trop grand"). Si votre nombre est top petit > Afficher un messager ("Nombre trop petit"). Et si votre nombre correspond au nombre aléatoire > Afficher un message de succès.
+      </ul>
+
+
+      <input type="number" id="yournumber" name="Number">
+      <button onclick="gamefunction();">Jouer!</button>
+
+          <script type="text/javascript">
+
+          function gamefunction() {
+          var nbmax = 100;
+          var nbmin = 1; 
+          var nombreRandomsauvergarde = Math.floor(Math.random() * (nbmax - nbmin) + nbmin);
+          var nombrechoisi = document.getElementById('yournumber').innerHTML;
+
+          if (nombrechoisi > nombreRandomsauvergarde) {
+            document.write("Nombre trop grand!"); 
+          }else if (nombrechoisi < nombreRandomsauvergarde) {
+              document.write("Nombre trop petit!");
+            }else if(nombreRandomsauvergarde == nombrechoisi) {
+                document.write("Vous avez devinez!");
+          }
+
+      </script>
+      
+      <h1>Exercice 10 - Les Conversions</h1>
+      <h5>10.1 - Conversion de degrés en Fahrenheit.</h5>
+      <p>Créer un champs input, ainsi qu'un bouton permettant de convertir un nombre entier de degrés en Farhenheit.</p>
+      <h5>10.2 - Conversion d'euros en Dolar.</h5>
+      <p>Créer un champs input, ainsi qu'un bouton permettant de convertir l'Euros en Dollar.</p>
+      <h5>10.3 - Conversion de pounds en euros.</h5>
+      <p>Créer un champs input, ainsi qu'un bouton permettant de convertir des Pounds en Euros.</p>
+      
+  </body>
+</html>     

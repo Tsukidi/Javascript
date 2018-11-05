@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TD MMI</title>
+  </head>
+  <body>
+
+    //Exercice 1
+    <h1>Exercice 1</h1>
+    <p>Créez deux champs input et un bouton. Effecteur la somme des champs input.  </p>
+    <input type="text" id="champ1" value="">
+    <input type="text" id="champ2" value="">
+    <button onclick="getVar();"> Submit</button>
+    <p>Resultat <span id="result"></span></p>
+
+    <script>
+      function getVar(){
+        var Nombre1 = Number(document.getElementById('champ1').value);
+        var Nombre2 = Number(document.getElementById('champ2').value);
+        var resultat = Nombre1 + Nombre2;
+        document.getElementById('result').innerHTML = resultat;
+    }
+    </script>
+
+    //Exercice 2
+    <h1 id="exercice">Exercice 2</h1>
+    <p>Définir un bouton qui change la couleur de h1 </p>
+    <button onclick="changeColor('red')">Rouge</button>
+    <button onclick="changeColor('Lightgreen')">Vert</button>
+    <button onclick="changeColor('Skyblue')">Bleu</button>
+    <script>
+      function changeColor(h1){
+      document.getElementById('exercice').style.color = h1 ;
+    }
+    </script>
+
+    //Exercice 3
+    <h1>Exercice 3</h1>
+    <p>Calculatrice en direct</p>
+    <button onclick="chiffre('1')">1</button>
+    <button onclick="chiffre('2')">2</button>
+    <button onclick="chiffre('3')">3</button>
+    <button onclick="chiffre('-')">-</button>
+    <br />
+    <button onclick="chiffre('4')">4</button>
+    <button onclick="chiffre('5')">5</button>
+    <button onclick="chiffre('6')">6</button>
+    <button onclick="chiffre('+')">+</button>
+    <br />
+    <button onclick="chiffre('7')">7</button>
+    <button onclick="chiffre('8')">8</button>
+    <button onclick="chiffre('9')">9</button>
+    <button onclick="chiffre('.')">.</button>
+    <br />
+    <button onclick="chiffre('/')">/</button>
+    <button onclick="chiffre('*')">*</button>
+    <button onclick="chiffre('0')">0</button>
+    <p>Calcul <span id="calcul"></span></p>
+    <p>Total <span id="total"></span></p>
+    <script>
+      function chiffre(nombre){
+      var operation;
+      operation = document.getElementById('calcul').innerHTML += nombre;
+      document.getElementById('calcul').innerHTML = operation;
+      Total = eval(operation);
+      document.getElementById('total').innerHTML = Total;
+    }
+    </script>
+    
+    //Exercice 4
+    <h1>Exercice 4</h1>
+    <p>Les couleurs qui bouge</p>
+    
+  </body>
+  </html>
